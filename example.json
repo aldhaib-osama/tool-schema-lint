@@ -1,0 +1,27 @@
+{
+  "tools": [
+    {
+      "name": "get_weather",
+      "description": "Read-only weather lookup for one city.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "city": {"type": "string", "enum": ["Khartoum", "Dubai", "Riyadh"]},
+          "units": {"type": "string", "maxLength": 10}
+        },
+        "required": ["city"]
+      }
+    },
+    {
+      "name": "run_report",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string"},
+          "options": {"type": "object"}
+        }
+      }
+    }
+  ]
+}
